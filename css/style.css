@@ -1,0 +1,436 @@
+@import url('https://fonts.googleapis.com/css2?family=Gentium+Plus&display=swap');
+
+/*Menu principal*/
+body, html {
+  height: 100%;
+
+}
+
+body{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+  background-image: url("../imgs/Fondo\ apartados.png");
+  background-repeat: repeat-y;
+  font-family: 'Gentium Plus', serif;
+}
+
+/*INDEX 1*/
+.index1 a{
+  text-decoration: none;
+  color:rgb(105, 2, 2)
+}
+
+.index1 a:hover{
+  text-decoration: none;
+  color:rgb(231, 231, 231);
+  text-align: center;
+}
+
+.menu:hover{ 
+  background-color: black;
+  opacity:0.2; 
+}
+
+.index1 a h1{
+  padding:25%;
+  text-align: center;
+}
+
+/*Categorias*/
+.games{
+    position:absolute;
+    width: 22%;
+    top: 17%;
+    left : 18%;
+    z-index: 1;
+  }
+  
+ .pintura{
+    position:absolute;
+    width: 24%;
+    bottom:5%;
+    right : 10%;
+    z-index:2;
+  }
+
+  .comic{
+    position:absolute;
+    width: 22%;
+    bottom: 6%;
+    left: 23%;
+    z-index: 3;
+  }
+
+  .ilustracion{
+    position:absolute;
+    width:21%;
+    top: 9%;
+    right : 25%;
+    z-index: 4;
+  }
+
+  .sobreMi{
+    position:absolute;
+    width: 15%;
+    bottom: 5%;
+    left : 45%;
+    z-index: 5;
+  }
+
+  a img:hover {
+    transform-style:scale(1.5)
+  }
+
+  .fondo{
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    z-index: -1;
+  }
+
+  /*Apartados*/
+.titulo{
+color: burlywood;
+padding:10px;
+text-align: center;
+}
+
+.texto{
+color:burlywood;
+padding:10px;
+text-align: center;
+}
+
+  /*SobreMi*/
+  .phobos{
+    position:absolute;
+    z-index: 1;
+    width:100%;
+    height: 100%;
+  }
+
+  header{
+  text-align: center;
+  color:grey;
+  }
+  
+  .back{
+    position:absolute;
+    z-index: -1;
+    width:100%;
+    height: 100%;
+  }
+
+  .presentacion{
+    text-align: center;
+    color:grey;
+  }
+
+
+  /*PINTURA*/
+    .pcolumn img{
+      width:100%;
+      margin-top: 5px;
+    }
+
+    .prow{
+      display: flex;
+      padding: 5px;
+      flex-wrap: wrap;
+    }
+
+    .pcolumn{
+      flex: 25%;
+      padding: 5px;
+    }
+
+/*comic*/
+    .ccolumn img{
+      width:100%;
+      margin-top: 5px; 
+      margin: 10px;
+      padding: 10px;
+      
+    }
+   
+     /* https://codepen.io/kikopalomares/pen/zYGvzvw  web codigo para hacer slider*/
+
+
+    .crow{
+      display: flex;
+      padding: 10px;
+      flex-wrap: wrap;
+    }
+
+    .ccolumn{
+      flex: 25%;
+      padding: 10px;
+      margin: 10px;
+    }
+
+/*games*/
+    .gcolumn img{
+      width:100%;
+      margin-top: 5px;
+    }
+
+    .grow{
+      display: flex;
+      padding: 5px;
+      flex-wrap: wrap;
+    }
+
+    .gcolumn{
+      flex: 25%;
+      padding: 5px;
+    }
+
+/*ilustracion*/
+  .icolumn img{
+    width:100%;
+    margin-top: 5px;
+  }
+
+  .irow{
+    display: flex;
+    padding: 5px;
+    flex-wrap: wrap;
+  }
+
+  .icolumn{
+    flex: 25%;
+    padding: 5px;
+  }
+
+  /*SLIDER*/
+
+label{cursor: pointer;}
+
+/* Contenedor para centrar */
+.ContainerCenter{
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  box-sizing: border-box;
+}
+/* Input */
+input{display: none}
+
+
+
+/* Slider */
+.Carrusels{
+  height: 500px;
+  width: 700px;
+  position: relative;
+  overflow-x: hidden;
+}
+.Carrusel{
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  background-size: cover;
+  transition: all .5s ease;
+}
+
+.Carrusel img{
+    height: 90%;
+    max-width: 90%;
+    width:100%;
+}
+
+/* Estado 1 */
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(0%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(100%, 0);}
+#Slider1:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(200%, 0);}
+/* Estado 2 */
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-100%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(0%, 0);}
+#Slider2:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(100%, 0);}
+/* Estado 3 */
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(1) {transform: translate(-200%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(2) {transform: translate(-100%, 0);}
+#Slider3:checked ~ .Carrusels .Carrusel:nth-of-type(3) {transform: translate(0%, 0);}
+
+
+/* Flechas */
+.Carrusels .ArrowLeft, .Carrusels .ArrowRight{
+  position: absolute;
+  height: 100%;
+ max-width: 2em;
+  align-items: center;
+  justify-content: center;
+  display: none;
+  user-select: none;
+}
+.Carrusels .ArrowLeft{left: 0px;}
+.Carrusels .ArrowRight{right: 0px;}
+/* Configuracion de flechas individuales */
+#Slider1:checked ~ .Carrusels .Arrow1{display: flex;}
+#Slider2:checked ~ .Carrusels .Arrow2{display: flex;}
+#Slider3:checked ~ .Carrusels .Arrow3{display: flex;}
+
+
+/* Selectores */
+.Selectors {
+  max-width: 60px;
+  padding: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.Selectors .Selector {
+  background-color: #FFF;
+  height: 10px;
+  max-width: 10px;
+  display: block;
+  border-radius: 5px;
+}
+/* Condicionales para botón inferior */
+#Slider1:checked ~ .Selectors .Selector:nth-of-type(1) {background-color: #999999;}
+#Slider2:checked ~ .Selectors .Selector:nth-of-type(2) {background-color: #999999;}
+#Slider3:checked ~ .Selectors .Selector:nth-of-type(3) {background-color: #999999;}
+
+  /*Footer*/
+  footer{
+    position:fixed;
+    bottom:0;
+
+  }
+
+/*parrafo*/
+ .footer{    
+  background-color: rgba(136, 4, 4, 0.5);
+  color:blanchedalmond;
+  text-decoration: solid;
+ }
+
+  .instagram{
+    filter: grayscale(100%);
+    width:50px;
+  }
+
+  .linkedin{
+    background-color: antiquewhite;
+    border:solid white;
+    border-radius: 30%;
+    width:35px;
+  }
+
+  @media (max-width: 800px){
+    .pcolumn{
+        flex: 40%;
+    }
+    body, html {
+      height: auto;
+    }
+    .games{
+      position:absolute;
+      width: 45%;
+      top: 22%;
+      left : 12%;
+      z-index: 1;
+    }
+    
+   .pintura{
+      position:absolute;
+      width: 35%;
+      bottom:19%;
+      right : 9%;
+      z-index:2;
+    }
+  
+    .comic{
+      position:absolute;
+      width: 40%;
+      bottom: 19%;
+      left: 17%;
+      z-index: 3;
+    }
+  
+    .ilustracion{
+      position:absolute;
+      width:30%;
+      top: 22%;
+      right : 22%;
+      z-index: 4;
+    }
+  
+    .sobreMi{
+      position:absolute;
+      width: 25%;
+      bottom: 28%;
+      left : 35%;
+      z-index: 5;
+    }
+    
+    .fondo{
+      height: 90%;
+    }
+  
+  }
+
+@media (max-width: 600px){
+  .pcolumn{
+      flex: 100%;
+  }
+  body, html {
+    height: 100%;
+  }
+  .games{
+    position:absolute;
+    width: 45%;
+    top: 22%;
+    left : 12%;
+    z-index: 1;
+  }
+  
+ .pintura{
+    position:absolute;
+    width: 35%;
+    bottom:19%;
+    right : 9%;
+    z-index:2;
+  }
+
+  .comic{
+    position:absolute;
+    width: 40%;
+    bottom: 19%;
+    left: 17%;
+    z-index: 3;
+  }
+
+  .ilustracion{
+    position:absolute;
+    width:30%;
+    top: 22%;
+    right : 22%;
+    z-index: 4;
+  }
+
+  .sobreMi{
+    position:absolute;
+    width: 25%;
+    bottom: 28%;
+    left : 35%;
+    z-index: 5;
+  }
+
+  .fondo {
+    height:85%;
+  }
+
+ /* footer{
+    background:rgba(158, 31, 22, 0.74);
+    border:solid;
+    height: 10%;
+  }*/
+
+  footer{
+    height: 15%;
+  }
+  footer img{
+    width:7%;
+  }
+}
