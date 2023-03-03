@@ -2,13 +2,14 @@
     margin:0;
     padding:0;
     box-sizing: border-box;
+    
 }
 
 
 body{
    background-image: url("../imgs/Menu.png"); 
    background-repeat: no-repeat;
-   background-size: cover;
+   background-size: 100% 100%;
    min-height: 100vh;
    max-width:100%;
    font-size: 100%;
@@ -184,3 +185,14 @@ footer{
 
 /*APARTADOS*/
 
+
+/*MEDIA QUERY*/
+
+@media (max-width: 480px) {
+    /*body {
+        background-image: url(images/background-mobile.jpg);
+    }*/
+
+    img {
+    width: 100%;
+    }
