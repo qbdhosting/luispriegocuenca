@@ -1,198 +1,151 @@
-*{
-    margin:0;
-    padding:0;
-    box-sizing: border-box;
-    
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
 }
 
+section {
+    margin: 0;
+    padding: 0;
+}
 
-body{
-   background-image: url("../imgs/Menu.png"); 
-   background-repeat: no-repeat;
-   background-size: 100% 100%;
-   min-height: 100vh;
-   max-width:100%;
-   font-size: 100%;
+body {
+    background-image: url("../imgs/Menu1.png"); 
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    min-height: 100vh;
+    max-width: 100%;
+    font-size: 100%;
 }
 
 /*INDEX*/
-.menu{
-    margin:0;
-    width:auto;
-    height: auto; 
-    display:flex;
-    flex-wrap:wrap;
+.menu {
+    margin: 0;
+    padding: 50px;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center; /* Centra los elementos horizontalmente */
 }
 
+.row {
+    display: flex;
+    width: 100%;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 20px; /* Espacio entre las filas */
+}
 
-.nombre{
-    text-align:center;
-    padding:15px;
-    width:100%;
-    height:8%;
+.row > div {
+    flex: 1;
+    margin: 10px;
+    height: 200px;
+    max-width: calc(33.33% - 20px); /* El ancho máximo es el 33.33% del contenedor menos el margen */
+}
+
+.row2 {
+    display: flex;
+    width: 50%;
+    justify-content: center; /* Centra los elementos horizontalmente */
+    margin-bottom: 20px; /* Espacio entre las filas */
+}
+.row2 > div {
+    flex: 1;
+    margin: 10px;
+    height: 100px;
+    max-width: calc(25% - 20px); /* El ancho máximo es el 33.33% del contenedor menos el margen */
+}
+
+.nombre {
+    text-align: center;
+    padding: 15px;
+    width: 100%;
+    height: 8%;
     background-color: rgba(0, 0, 0, 0.575);   
 }
 
-p{
+.comic, .pintura, .ilustracion, .games, .cv {
+    width: calc(50% - 20px);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.menu p {
     font-size: 2em;
-    color:rgba(241, 178, 100, 0.856);
+    color: rgba(241, 178, 100, 0.856);
 }
 
-.games{
-    display:flex;
-    float:left;
-    margin-top:10%;
-    margin-left:15%;
-    margin-right: 10%;
-    margin-bottom:0;
-    width:300px;
-    height: 250px;   
-}
-
-.games:hover{
-    display:flex;
-    float:left;
-    margin-top:10%;
-    margin-left:15%;
-    margin-right: 10%;
-    margin-bottom:0;
-    width:300px;
-    height: 250px; 
-    background-color: rgba(0, 0, 0, 0.575);
-}
-
-.ilustracion{
-    display:flex;
-    float:right;
-    margin-top:7%;
-    margin-left:5%;
-    margin-right: 10%;
-    margin-bottom:0;
-    width:300px;
-    height: 250px; 
-}
-
-.cv{
-    display:flex;
-    width: 100%;
-    height: 100px;    
-}
-
-.comic{
-    display:flex;
-    float:left;
-    margin-top:0%;
-    margin-left:20%;
-    margin-right:10%;
-    width:300px;
-    height: 200px; 
-}
-
-.pintura{
-    display:flex;
-    float:right;
-    margin-left:10%;
-    margin-right: 10%;
-    width:300px;
-    height: 200px; 
+p{
+    font-size: 1.7em;  
 }
 
 /*hover*/
-
-/*enlace*/ 
-text-decoration: none;
-
-
-.ilustracion:hover{
-    display:flex;
-    float:right;
-    margin-top:7%;
-    margin-left:5%;
-    margin-right: 10%;
-    margin-bottom:0;
-    width:300px;
-    height: 250px; 
-    background-color: rgba(0, 0, 0, 0.575);
+.games:hover .enlace, .ilustracion:hover .enlace, .cv:hover .enlace, .comic:hover .enlace, .pintura:hover .enlace {
+    display: block;
 }
 
-.cv:hover{
-    display:flex;
-    width: 100%;
-    height: 150px; 
-    background-color: rgba(0, 0, 0, 0.575);
-}
-
-.comic:hover{
-    display:flex;
-    float:left;
-    margin-top:5%;
-    margin-left:20%;
-    margin-right:10%;
-    width:300px;
-    height: 200px; 
-    background-color: rgba(0, 0, 0, 0.575);
-}
-
-.pintura:hover{
-    display:flex;
-    float:right;
-    margin-top:5%;
-    margin-left:10%;
-    margin-right: 10%;
-    width:300px;
-    height: 200px; 
-    background-color: rgba(0, 0, 0, 0.575);
-}
-
-.enlace {
+.menu .enlace {
+    display: none;
     position: absolute;
-    width: 300px;
-    height: 200px;
-  }
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+}
 
-  .enlaceCV {
+.games:hover, .ilustracion:hover, .cv:hover, .comic:hover, .pintura:hover {
+    background-color: rgba(0, 0, 0, 0.575);
+}
+
+.enlaceCV {
     position: absolute;
     width: 100%;
     height: 200px;
-  }
+}
 
 /*footer*/
-footer{
-    position:fixed;
-    bottom:0;
+footer {
+    position: fixed;
+    bottom: 0;
     width: 100%;
-  }
+}
 
 /*parrafo*/
- .footer{    
-  background-color: rgba(136, 4, 4, 0.5);
-  color:blanchedalmond;
-  text-decoration: solid;
-  text-align: center;
- }
+.footer {    
+    background-color: rgba(136, 4, 4, 0.5);
+    color: blanchedalmond;
+    text-decoration: solid;
+    text-align: center;
+}
 
-  .instagram{
+.instagram {
     filter: grayscale(100%);
-    width:50px;
-  }
+    width: 50px;
+}
 
-  .linkedin{
+.linkedin {
     background-color: antiquewhite;
-    border:solid white;
+    border: solid white;
     border-radius: 30%;
-    width:50px;
-  }
-
-/*APARTADOS*/
-
+    width: 50px;
+}
 
 /*MEDIA QUERY*/
+@media (min-width: 768px) {
+    .row > div {
+        max-width: none; /* Ancho máximo ilimitado para evitar ajustes de tamaño */
+    }
+}
 
+/*REVISAR
 @media (max-width: 480px) {
     /*body {
         background-image: url(images/background-mobile.jpg);
-    }*/
+    }
 
     img {
-    width: 100%;
+        width: 100%;
     }
+}*/
